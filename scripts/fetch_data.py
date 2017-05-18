@@ -2,40 +2,57 @@
 
 import optparse
 import sys
-import wget
+import urllib.request
+import shutil
+from os.path import join
 
-SNAP="s3://graphchallenge/snap/{}/{}{}.{}" # name, name, suffix, format
+SNAP="https://graphchallenge.s3.amazonaws.com/snap/{}/{}{}.{}" # name, name, suffix, format
 SCALE="s3://graphchallenge/synthetic/graph500-scale{}-ef16/graph500-scale{}-ef16{}.{}"
 
+def download(url, outpath):
+    try:
+        with urllib.request.urlopen(url) as response, open(outpath, 'wb') as out_file:
+            shutil.copyfileobj(response, out_file)
+        print("{} successfully downloaded".format(url))
+    except Exception as e:
+        print("{} failed; {}".format(url, e))
+
 if __name__ == "__main__":
-    parser = optparse.OptionParser()
-    parser.add_option('--tsv', action="store_true", default=True, dest=tsv)
-    parser.add_option('--mmio', action="store_true", default=True, dest=mmio)
+    help_text = """ <snap|scale> [graph name] [outdir path] ... options """
+    parser = optparse.OptionParser(usage=help_text)
+    parser.add_option('--tsv', action="store_true", default=False, dest="tsv", help="include tsv format")
+    parser.add_option('--mmio', action="store_true", default=False, dest="mmio", help="include mmio format")
     opts, args = parser.parse_args(sys.argv[1:])
 
-    if not len(args) == 2:
-        print("Should be 2 args")
+    if not len(args) == 3:
+        print("Should be 3 args")
 
     g_type, g_name = args[0], args[1]
+    dest_dir = args[2]
     if g_type == "snap":
-        url = SNAP
+        url_template = SNAP
     else:
-        url = SCALE
+        url_template = SCALE
 
-    if opts.tsv:
-        fname = wget.download(url.format(args[1], args[1], '', "tsv"), out=dest)
-    if otps.mmio:
-        fname = wget.download(url.format(args[1], args[1], '', "mmio"), out=dest)
+    if opts.tsv or (not opts.tsv and not opts.mmio):
+        outpath = join(dest_dir, args[1] + ".tsv")
+        url = url_template.format(args[1], args[1], '', "tsv")
+        download(url, outpath)
 
-"""
-    s3://graphchallenge/snap/[URL_SUFFIX]/[URL_SUFFIX].tsv
-    s3://graphchallenge/snap/[URL_SUFFIX]/[URL_SUFFIX]_adj.tsv
-    s3://graphchallenge/snap/[URL_SUFFIX]/[URL_SUFFIX]_inc.tsv
-"""
+        outpath = join(dest_dir, args[1] + "_adj.tsv")
+        url = url_template.format(args[1], args[1], '_adj', "tsv")
+        download(url, outpath)
 
-"""
-    s3://graphchallenge/synthetic/graph500-scale[SCALE]-ef16/graph500-scale[SCALE]-ef16.mmio
-    s3://graphchallenge/synthetic/graph500-scale[SCALE]-ef16/graph500-scale[SCALE]-ef16_adj.mmio
-    s3://graphchallenge/synthetic/graph500-scale[SCALE]-ef16/graph500-scale[SCALE]-ef16_inc.mmio
-"""
+        outpath = join(dest_dir, args[1] + "_inc.tsv")
+        url = url_template.format(args[1], args[1], '_inc', "tsv")
+        download(url, outpath)
+
+    if opts.mmio or (not opts.tsv and not opts.mmio):
+        outpath = join(dest_dir, args[1] + "_adj.mmio")
+        url = url_template.format(args[1], args[1], '_adj', "mmio")
+        download(url, outpath)
+
+        outpath = join(dest_dir, args[1] + "_inc.mmio")
+        url = url_template.format(args[1], args[1], '_inc', "mmio")
+        download(url, outpath)
 
