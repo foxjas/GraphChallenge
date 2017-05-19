@@ -7,7 +7,7 @@ import shutil
 from os.path import join
 
 SNAP="https://graphchallenge.s3.amazonaws.com/snap/{}/{}{}.{}" # name, name, suffix, format
-SCALE="s3://graphchallenge/synthetic/graph500-scale{}-ef16/graph500-scale{}-ef16{}.{}"
+SCALE="https://graphchallenge.s3.amazonaws.com/synthetic/graph500-scale{}-ef16/graph500-scale{}-ef16{}.{}.gz" # name, name, suffix, format
 
 def download(url, outpath):
     try:
@@ -30,29 +30,31 @@ if __name__ == "__main__":
     g_type, g_name = args[0], args[1]
     dest_dir = args[2]
     if g_type == "snap":
-        url_template = SNAP
+        dest_fname = "{}"
     else:
+        dest_prefix = "graph500-scale{}-ef16".format(args[1])
+        dest_fname = dest_prefix + "{}" + ".gz"
         url_template = SCALE
 
     if opts.tsv or (not opts.tsv and not opts.mmio):
-        outpath = join(dest_dir, args[1] + ".tsv")
+        outpath = join(dest_dir, dest_fname.format(''))
         url = url_template.format(args[1], args[1], '', "tsv")
         download(url, outpath)
 
-        outpath = join(dest_dir, args[1] + "_adj.tsv")
+        outpath = join(dest_dir, dest_fname.format("_adj.tsv"))
         url = url_template.format(args[1], args[1], '_adj', "tsv")
         download(url, outpath)
 
-        outpath = join(dest_dir, args[1] + "_inc.tsv")
+        outpath = join(dest_dir, dest_fname.format("_inc.tsv"))
         url = url_template.format(args[1], args[1], '_inc', "tsv")
         download(url, outpath)
 
     if opts.mmio or (not opts.tsv and not opts.mmio):
-        outpath = join(dest_dir, args[1] + "_adj.mmio")
+        outpath = join(dest_dir, dest_fname.format("_adj.mmio"))
         url = url_template.format(args[1], args[1], '_adj', "mmio")
         download(url, outpath)
 
-        outpath = join(dest_dir, args[1] + "_inc.mmio")
+        outpath = join(dest_dir, dest_fname.format("_inc.mmio"))
         url = url_template.format(args[1], args[1], '_inc', "mmio")
         download(url, outpath)
 
