@@ -30,7 +30,8 @@ if __name__ == "__main__":
     g_type, g_name = args[0], args[1]
     dest_dir = args[2]
     if g_type == "snap":
-        dest_fname = "{}"
+        dest_fname = g_name + "{}"
+        url_template = SNAP
     else:
         dest_prefix = "graph500-scale{}-ef16".format(args[1])
         dest_fname = dest_prefix + "{}" + ".gz"
