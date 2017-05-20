@@ -38,7 +38,7 @@ if __name__ == "__main__":
         url_template = SCALE
 
     if opts.tsv or (not opts.tsv and not opts.mmio):
-        outpath = join(dest_dir, dest_fname.format(''))
+        outpath = join(dest_dir, dest_fname.format('.tsv'))
         url = url_template.format(args[1], args[1], '', "tsv")
         download(url, outpath)
 
