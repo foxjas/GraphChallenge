@@ -29,7 +29,7 @@ while nnz(xc) ~= nnz(any(E,2))
 end
 
 t_ktruss = etime(clock, t0);
-fprintf(2, 'k=%d: %f\n', k, t_ktruss);
+printf('k=%d: %f\n', k, t_ktruss);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Graph Challenge benchmark
