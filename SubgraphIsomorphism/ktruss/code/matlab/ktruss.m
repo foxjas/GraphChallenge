@@ -9,9 +9,9 @@ ii = load(inc_mat_file);
 t0 = clock;
 E = sparse( ii(:,1), ii(:,2), ii(:,3) );
 t_read = etime(clock, t0);
-fprintf(2, 'time to read data  : %f sec.\n', t_read);
+% fprintf(2, 'time to read data  : %f sec.\n', t_read);
 
-fprintf(2, 'computing k-truss\n');
+% fprintf(2, 'computing k-truss\n');
 t0 = clock;
 tmp = E.'*E;
 R = E* (tmp-diag(diag(tmp)));
@@ -29,7 +29,7 @@ while nnz(xc) ~= nnz(any(E,2))
 end
 
 t_ktruss = etime(clock, t0);
-fprintf(2, 'time to compute k-truss : %f\n', t_ktruss);
+fprintf(2, 'k=%d: %f\n', k, t_ktruss);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Graph Challenge benchmark

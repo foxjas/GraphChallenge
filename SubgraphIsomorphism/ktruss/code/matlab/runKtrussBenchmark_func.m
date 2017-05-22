@@ -1,9 +1,5 @@
-#!/usr/bin/octave -q
-
-arg_list = argv ();
-inputFile = arg_list{1}
-k = str2num(arg_list{2});
-E = ktruss(inputFile, k);
+function []=runKtrussBenchmark(input, k)
+E = ktruss(input, k);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Graph Challenge benchmark
