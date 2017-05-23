@@ -17,10 +17,10 @@ function ktruss(inc_mtx_file, k)
 
     # load input data       
     t_read_inc=@elapsed ii = readdlm( inc_mtx_file, '\t', Int64);
-    println("incidence matrix read time : ", t_read_inc);
+    # println("incidence matrix read time : ", t_read_inc);
 
     t_create_inc=@elapsed E = sparse( ii[:,1], ii[:,2], ii[:,3] );
-    println("sparse adj. matrix creation time : ", t_create_inc);
+    # println("sparse adj. matrix creation time : ", t_create_inc);
 
     #
     tic();
@@ -30,6 +30,7 @@ function ktruss(inc_mtx_file, k)
         E[find(x), :] = 0
         x, xc = calcx(E, m, n, k);
     end
+    toc();
     
     return E
 end

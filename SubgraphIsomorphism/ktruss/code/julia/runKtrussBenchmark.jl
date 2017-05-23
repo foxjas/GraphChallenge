@@ -1,24 +1,9 @@
-
 include("ktruss.jl");
 
-inc_mtx_file = "../../../data/ktruss_example.tsv"
-
-E_expected =  [1  1  0  0  0
-               0  1  1  0  0
-               1  0  0  1  0
-               0  0  1  1  0
-               1  0  1  0  0
-               0  0  0  0  0];
-
-
-@time E = ktruss(inc_mtx_file, 3);
-
-if sum( E - E_expected ) > 0
-    println("Unable to verify results");
-else
-    println("passed");
-    println(E);
-end
+input_file = ARGS[1];
+k = parse(Int, ARGS[2]);
+@time E = ktruss(input_file, k);
+# println(E);
 
 #######################################################
 # Graph Challenge Benchmark
