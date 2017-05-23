@@ -1,0 +1,30 @@
+graph=amazon0302,k=3
+k=3: 5.1900699999999995
+graph=cit-Patents,k=3
+k=3: 240.662271
+graph=graph500-scale18-ef16,k=3
+k=3: 2807.064485
+graph=amazon0302,k=6
+k=6: 5.839156
+graph=cit-Patents,k=6
+k=6: 280.746943
+graph=graph500-scale18-ef16,k=6
+k=6: 2696.2391900000002
+graph=amazon0302,k=12
+k=12: 8.76052
+graph=cit-Patents,k=12
+k=12: 313.79043
+graph=graph500-scale18-ef16,k=12
+k=12: 2880.505734
+graph=amazon0302,k=24
+k=24: 14.329521
+graph=cit-Patents,k=24
+k=24: 349.54076999999995
+graph=graph500-scale18-ef16,k=24
+k=24: 2819.804305
+graph=amazon0302,k=48
+k=48: 14.592068000000001
+graph=cit-Patents,k=48
+k=48: 386.263504
+graph=graph500-scale18-ef16,k=48
+k=48: 2676.931132

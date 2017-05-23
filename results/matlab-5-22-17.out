@@ -1,0 +1,39 @@
+graph=amazon0302,k=3
+inputFile = /data/GraphChallenge-17/amazon0302_inc.tsv
+k=3: 3.624374
+graph=cit-Patents,k=3
+inputFile = /data/GraphChallenge-17/cit-Patents_inc.tsv
+k=3: 226.600853
+graph=graph500-scale18-ef16,k=3
+inputFile = /data/GraphChallenge-17/graph500-scale18-ef16_inc.tsv
+graph=amazon0302,k=6
+inputFile = /data/GraphChallenge-17/amazon0302_inc.tsv
+k=6: 23.688972
+graph=cit-Patents,k=6
+inputFile = /data/GraphChallenge-17/cit-Patents_inc.tsv
+graph=graph500-scale18-ef16,k=6
+inputFile = /data/GraphChallenge-17/graph500-scale18-ef16_inc.tsv
+graph=amazon0302,k=12
+inputFile = /data/GraphChallenge-17/amazon0302_inc.tsv
+k=12: 5.619781
+graph=cit-Patents,k=12
+inputFile = /data/GraphChallenge-17/cit-Patents_inc.tsv
+k=12: 932.787689
+graph=graph500-scale18-ef16,k=12
+inputFile = /data/GraphChallenge-17/graph500-scale18-ef16_inc.tsv
+graph=amazon0302,k=24
+inputFile = /data/GraphChallenge-17/amazon0302_inc.tsv
+k=24: 2.491554
+graph=cit-Patents,k=24
+inputFile = /data/GraphChallenge-17/cit-Patents_inc.tsv
+k=24: 527.119591
+graph=graph500-scale18-ef16,k=24
+inputFile = /data/GraphChallenge-17/graph500-scale18-ef16_inc.tsv
+graph=amazon0302,k=48
+inputFile = /data/GraphChallenge-17/amazon0302_inc.tsv
+k=48: 2.227959
+graph=cit-Patents,k=48
+inputFile = /data/GraphChallenge-17/cit-Patents_inc.tsv
+k=48: 364.117218
+graph=graph500-scale18-ef16,k=48
+inputFile = /data/GraphChallenge-17/graph500-scale18-ef16_inc.tsv

@@ -1,0 +1,1030 @@
+graph=amazon0302,k=3
+Original input: 262111 vertices, 899792 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 262111 vertices, 1799584 edges
+Vertices: 262111    Edges: 1799584      1799584
+Current number of deleted edges is 308642
+Number of active vertices is : 262111
+The number of initial edges  : 1799584
+The number of delete edges   : 308642
+The number of leftover edges : 1490942
+Total time for k-Truss = 3 : 0.0270548
+The number of iterations           : 4
+The number of iterations           : 4
+262111, 1799584, 1e+10, 0.0270548
+Vertices: 262111    Edges: 1799584
+
+graph=cit-Patents,k=3
+Original input: 3774768 vertices, 16518947 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 3774768 vertices, 33037894 edges
+Vertices: 3774768    Edges: 33037894      33037894
+Current number of deleted edges is 17450082
+Number of active vertices is : 3774768
+The number of initial edges  : 33037894
+The number of delete edges   : 17450082
+The number of leftover edges : 15587812
+Total time for k-Truss = 3 : 0.438966
+The number of iterations           : 4
+The number of iterations           : 4
+3774768, 33037894, 1e+10, 0.438966
+Vertices: 3774768    Edges: 33037894
+
+graph=graph500-scale18-ef16,k=3
+Original input: 174147 vertices, 3800348 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 174147 vertices, 7600696 edges
+Vertices: 174147    Edges: 7600696      7600696
+Current number of deleted edges is 798012
+Number of active vertices is : 174147
+The number of initial edges  : 7600696
+The number of delete edges   : 798012
+The number of leftover edges : 6802684
+Total time for k-Truss = 3 : 2.12728
+The number of iterations           : 4
+The number of iterations           : 4
+174147, 7600696, 1e+10, 2.12728
+Vertices: 174147    Edges: 7600696
+
+graph=graph500-scale19-ef16,k=3
+Original input: 335318 vertices, 7729675 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 335318 vertices, 15459350 edges
+Vertices: 335318    Edges: 15459350      15459350
+Current number of deleted edges is 1815166
+Number of active vertices is : 335318
+The number of initial edges  : 15459350
+The number of delete edges   : 1815166
+The number of leftover edges : 13644184
+Total time for k-Truss = 3 : 6.21717
+The number of iterations           : 4
+The number of iterations           : 4
+335318, 15459350, 1e+10, 6.21717
+Vertices: 335318    Edges: 15459350
+
+graph=graph500-scale20-ef16,k=3
+Original input: 645820 vertices, 15680861 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 645820 vertices, 31361722 edges
+Vertices: 645820    Edges: 31361722      31361722
+Current number of deleted edges is 4075300
+Number of active vertices is : 645820
+The number of initial edges  : 31361722
+The number of delete edges   : 4075300
+The number of leftover edges : 27286422
+Total time for k-Truss = 3 : 18.4437
+The number of iterations           : 4
+The number of iterations           : 4
+645820, 31361722, 1e+10, 18.4437
+Vertices: 645820    Edges: 31361722
+
+graph=graph500-scale21-ef16,k=3
+Original input: 1243072 vertices, 31731650 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 1243072 vertices, 63463300 edges
+Vertices: 1243072    Edges: 63463300      63463300
+Current number of deleted edges is 9084408
+Number of active vertices is : 1243072
+The number of initial edges  : 63463300
+The number of delete edges   : 9084408
+The number of leftover edges : 54378892
+Total time for k-Truss = 3 : 52.9664
+The number of iterations           : 4
+The number of iterations           : 4
+1243072, 63463300, 1e+10, 52.9664
+Vertices: 1243072    Edges: 63463300
+
+graph=graph500-scale22-ef16,k=3
+Original input: 2393285 vertices, 64097004 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 2393285 vertices, 128194008 edges
+Vertices: 2393285    Edges: 128194008      128194008
+Current number of deleted edges is 20089226
+Number of active vertices is : 2393285
+The number of initial edges  : 128194008
+The number of delete edges   : 20089226
+The number of leftover edges : 108104782
+Total time for k-Truss = 3 : 148.301
+The number of iterations           : 4
+The number of iterations           : 4
+2393285, 128194008, 1e+10, 148.301
+Vertices: 2393285    Edges: 128194008
+
+graph=graph500-scale23-ef16,k=3
+Original input: 4606314 vertices, 129250705 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 4606314 vertices, 258501410 edges
+Vertices: 4606314    Edges: 258501410      258501410
+Current number of deleted edges is 44118230
+Number of active vertices is : 4606314
+The number of initial edges  : 258501410
+The number of delete edges   : 44118230
+The number of leftover edges : 214383180
+Total time for k-Truss = 3 : 428.886
+The number of iterations           : 4
+The number of iterations           : 4
+4606314, 258501410, 1e+10, 428.886
+Vertices: 4606314    Edges: 258501410
+
+graph=amazon0302,k=6
+Original input: 262111 vertices, 899792 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 262111 vertices, 1799584 edges
+Vertices: 262111    Edges: 1799584      1799584
+Current number of deleted edges is 1324590
+Number of active vertices is : 262111
+The number of initial edges  : 1799584
+The number of delete edges   : 1324590
+The number of leftover edges : 474994
+Total time for k-Truss = 6 : 0.0503587
+The number of iterations           : 4
+The number of iterations           : 4
+262111, 1799584, 1e+10, 0.0503587
+Vertices: 262111    Edges: 1799584
+
+graph=cit-Patents,k=6
+Original input: 3774768 vertices, 16518947 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 3774768 vertices, 33037894 edges
+Vertices: 3774768    Edges: 33037894      33037894
+Current number of deleted edges is 29515644
+Number of active vertices is : 3774768
+The number of initial edges  : 33037894
+The number of delete edges   : 29515644
+The number of leftover edges : 3522250
+Total time for k-Truss = 6 : 0.649194
+The number of iterations           : 4
+The number of iterations           : 4
+3774768, 33037894, 1e+10, 0.649194
+Vertices: 3774768    Edges: 33037894
+
+graph=graph500-scale18-ef16,k=6
+Original input: 174147 vertices, 3800348 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 174147 vertices, 7600696 edges
+Vertices: 174147    Edges: 7600696      7600696
+Current number of deleted edges is 1932778
+Number of active vertices is : 174147
+The number of initial edges  : 7600696
+The number of delete edges   : 1932778
+The number of leftover edges : 5667918
+Total time for k-Truss = 6 : 2.58786
+The number of iterations           : 4
+The number of iterations           : 4
+174147, 7600696, 1e+10, 2.58786
+Vertices: 174147    Edges: 7600696
+
+graph=graph500-scale19-ef16,k=6
+Original input: 335318 vertices, 7729675 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 335318 vertices, 15459350 edges
+Vertices: 335318    Edges: 15459350      15459350
+Current number of deleted edges is 4187490
+Number of active vertices is : 335318
+The number of initial edges  : 15459350
+The number of delete edges   : 4187490
+The number of leftover edges : 11271860
+Total time for k-Truss = 6 : 6.9775
+The number of iterations           : 4
+The number of iterations           : 4
+335318, 15459350, 1e+10, 6.9775
+Vertices: 335318    Edges: 15459350
+
+graph=graph500-scale20-ef16,k=6
+Original input: 645820 vertices, 15680861 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 645820 vertices, 31361722 edges
+Vertices: 645820    Edges: 31361722      31361722
+Current number of deleted edges is 8965784
+Number of active vertices is : 645820
+The number of initial edges  : 31361722
+The number of delete edges   : 8965784
+The number of leftover edges : 22395938
+Total time for k-Truss = 6 : 20.6822
+The number of iterations           : 4
+The number of iterations           : 4
+645820, 31361722, 1e+10, 20.6822
+Vertices: 645820    Edges: 31361722
+
+graph=graph500-scale21-ef16,k=6
+Original input: 1243072 vertices, 31731650 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 1243072 vertices, 63463300 edges
+Vertices: 1243072    Edges: 63463300      63463300
+Current number of deleted edges is 19163494
+Number of active vertices is : 1243072
+The number of initial edges  : 63463300
+The number of delete edges   : 19163494
+The number of leftover edges : 44299806
+Total time for k-Truss = 6 : 58.7216
+The number of iterations           : 4
+The number of iterations           : 4
+1243072, 63463300, 1e+10, 58.7216
+Vertices: 1243072    Edges: 63463300
+
+graph=graph500-scale22-ef16,k=6
+Original input: 2393285 vertices, 64097004 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 2393285 vertices, 128194008 edges
+Vertices: 2393285    Edges: 128194008      128194008
+Current number of deleted edges is 40864126
+Number of active vertices is : 2393285
+The number of initial edges  : 128194008
+The number of delete edges   : 40864126
+The number of leftover edges : 87329882
+Total time for k-Truss = 6 : 157.394
+The number of iterations           : 4
+The number of iterations           : 4
+2393285, 128194008, 1e+10, 157.394
+Vertices: 2393285    Edges: 128194008
+
+graph=graph500-scale23-ef16,k=6
+Original input: 4606314 vertices, 129250705 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 4606314 vertices, 258501410 edges
+Vertices: 4606314    Edges: 258501410      258501410
+Current number of deleted edges is 86589902
+Number of active vertices is : 4606314
+The number of initial edges  : 258501410
+The number of delete edges   : 86589902
+The number of leftover edges : 171911508
+Total time for k-Truss = 6 : 479.018
+The number of iterations           : 4
+The number of iterations           : 4
+4606314, 258501410, 1e+10, 479.018
+Vertices: 4606314    Edges: 258501410
+
+graph=amazon0302,k=12
+Original input: 262111 vertices, 899792 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 262111 vertices, 1799584 edges
+Vertices: 262111    Edges: 1799584      1799584
+Current number of deleted edges is 1792210
+Number of active vertices is : 262111
+Current number of deleted edges is 7374
+Number of active vertices is : 4726
+Current number of deleted edges is 0
+The number of initial edges  : 1799584
+The number of delete edges   : 1799584
+The number of leftover edges : 0
+Total time for k-Truss = 12 : 0.070745
+The number of iterations           : 5
+The number of iterations           : 5
+262111, 1799584, 1e+10, 0.070745
+Vertices: 262111    Edges: 1799584
+
+graph=cit-Patents,k=12
+Original input: 3774768 vertices, 16518947 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 3774768 vertices, 33037894 edges
+Vertices: 3774768    Edges: 33037894      33037894
+Current number of deleted edges is 32439940
+Number of active vertices is : 3774768
+Current number of deleted edges is 497172
+Number of active vertices is : 149111
+Current number of deleted edges is 40840
+Number of active vertices is : 8387
+Current number of deleted edges is 9878
+Number of active vertices is : 2877
+Current number of deleted edges is 3816
+Number of active vertices is : 1870
+Current number of deleted edges is 1618
+Number of active vertices is : 1564
+Current number of deleted edges is 782
+Number of active vertices is : 1448
+The number of initial edges  : 33037894
+The number of delete edges   : 32994046
+The number of leftover edges : 43848
+Total time for k-Truss = 12 : 1.03404
+The number of iterations           : 10
+The number of iterations           : 10
+3774768, 33037894, 1e+10, 1.03404
+Vertices: 3774768    Edges: 33037894
+
+graph=graph500-scale18-ef16,k=12
+Original input: 174147 vertices, 3800348 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 174147 vertices, 7600696 edges
+Vertices: 174147    Edges: 7600696      7600696
+Current number of deleted edges is 3048562
+Number of active vertices is : 174147
+Current number of deleted edges is 214070
+Number of active vertices is : 47722
+Current number of deleted edges is 66836
+Number of active vertices is : 29431
+Current number of deleted edges is 30442
+Number of active vertices is : 26534
+Current number of deleted edges is 14694
+Number of active vertices is : 25135
+Current number of deleted edges is 8048
+Number of active vertices is : 24469
+Current number of deleted edges is 3706
+Number of active vertices is : 24092
+The number of initial edges  : 7600696
+The number of delete edges   : 3386358
+The number of leftover edges : 4214338
+Total time for k-Truss = 12 : 13.6925
+The number of iterations           : 10
+The number of iterations           : 10
+174147, 7600696, 1e+10, 13.6925
+Vertices: 174147    Edges: 7600696
+
+graph=graph500-scale19-ef16,k=12
+Original input: 335318 vertices, 7729675 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 335318 vertices, 15459350 edges
+Vertices: 335318    Edges: 15459350      15459350
+Current number of deleted edges is 6381764
+Number of active vertices is : 335318
+Current number of deleted edges is 463200
+Number of active vertices is : 87281
+Current number of deleted edges is 66454
+Number of active vertices is : 46376
+Current number of deleted edges is 25218
+Number of active vertices is : 43878
+Current number of deleted edges is 11734
+Number of active vertices is : 42878
+Current number of deleted edges is 6246
+Number of active vertices is : 42387
+Current number of deleted edges is 3632
+Number of active vertices is : 42132
+The number of initial edges  : 15459350
+The number of delete edges   : 6958248
+The number of leftover edges : 8501102
+Total time for k-Truss = 12 : 43.3139
+The number of iterations           : 10
+The number of iterations           : 10
+335318, 15459350, 1e+10, 43.3139
+Vertices: 335318    Edges: 15459350
+
+graph=graph500-scale20-ef16,k=12
+Original input: 645820 vertices, 15680861 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 645820 vertices, 31361722 edges
+Vertices: 645820    Edges: 31361722      31361722
+Current number of deleted edges is 13246058
+Number of active vertices is : 645820
+Current number of deleted edges is 943526
+Number of active vertices is : 151199
+Current number of deleted edges is 210580
+Number of active vertices is : 83644
+Current number of deleted edges is 60230
+Number of active vertices is : 71822
+Current number of deleted edges is 23526
+Number of active vertices is : 68947
+Current number of deleted edges is 10882
+Number of active vertices is : 67847
+Current number of deleted edges is 4400
+Number of active vertices is : 67323
+The number of initial edges  : 31361722
+The number of delete edges   : 14499202
+The number of leftover edges : 16862520
+Total time for k-Truss = 12 : 127.82
+The number of iterations           : 10
+The number of iterations           : 10
+645820, 31361722, 1e+10, 127.82
+Vertices: 645820    Edges: 31361722
+
+graph=graph500-scale21-ef16,k=12
+Original input: 1243072 vertices, 31731650 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 1243072 vertices, 63463300 edges
+Vertices: 1243072    Edges: 63463300      63463300
+Current number of deleted edges is 27908966
+Number of active vertices is : 1243072
+Current number of deleted edges is 1598426
+Number of active vertices is : 276592
+Current number of deleted edges is 517322
+Number of active vertices is : 165223
+Current number of deleted edges is 191950
+Number of active vertices is : 137824
+Current number of deleted edges is 84254
+Number of active vertices is : 128461
+Current number of deleted edges is 40254
+Number of active vertices is : 124480
+Current number of deleted edges is 18488
+Number of active vertices is : 122548
+The number of initial edges  : 63463300
+The number of delete edges   : 30359660
+The number of leftover edges : 33103640
+Total time for k-Truss = 12 : 348.172
+The number of iterations           : 10
+The number of iterations           : 10
+1243072, 63463300, 1e+10, 348.172
+Vertices: 1243072    Edges: 63463300
+
+graph=graph500-scale22-ef16,k=12
+Original input: 2393285 vertices, 64097004 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 2393285 vertices, 128194008 edges
+Vertices: 2393285    Edges: 128194008      128194008
+Current number of deleted edges is 57869820
+Number of active vertices is : 2393285
+Current number of deleted edges is 3003748
+Number of active vertices is : 512472
+Current number of deleted edges is 674574
+Number of active vertices is : 277938
+Current number of deleted edges is 289786
+Number of active vertices is : 252373
+Current number of deleted edges is 140836
+Number of active vertices is : 240232
+Current number of deleted edges is 73514
+Number of active vertices is : 234228
+Current number of deleted edges is 39642
+Number of active vertices is : 230960
+The number of initial edges  : 128194008
+The number of delete edges   : 62091920
+The number of leftover edges : 66102088
+Total time for k-Truss = 12 : 1004.02
+The number of iterations           : 10
+The number of iterations           : 10
+2393285, 128194008, 1e+10, 1004.02
+Vertices: 2393285    Edges: 128194008
+
+graph=graph500-scale23-ef16,k=12
+Original input: 4606314 vertices, 129250705 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 4606314 vertices, 258501410 edges
+Vertices: 4606314    Edges: 258501410      258501410
+Current number of deleted edges is 120123878
+
+graph=amazon0302,k=24
+Original input: 262111 vertices, 899792 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 262111 vertices, 1799584 edges
+Vertices: 262111    Edges: 1799584      1799584
+Current number of deleted edges is 1799226
+Number of active vertices is : 262111
+Current number of deleted edges is 358
+Number of active vertices is : 261
+Current number of deleted edges is 0
+The number of initial edges  : 1799584
+The number of delete edges   : 1799584
+The number of leftover edges : 0
+Total time for k-Truss = 24 : 0.083129
+The number of iterations           : 5
+The number of iterations           : 5
+262111, 1799584, 1e+10, 0.083129
+Vertices: 262111    Edges: 1799584
+
+graph=cit-Patents,k=24
+Original input: 3774768 vertices, 16518947 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 3774768 vertices, 33037894 edges
+Vertices: 3774768    Edges: 33037894      33037894
+Current number of deleted edges is 32939570
+Number of active vertices is : 3774768
+Current number of deleted edges is 88218
+Number of active vertices is : 30233
+Current number of deleted edges is 1004
+Number of active vertices is : 285
+Current number of deleted edges is 32
+Number of active vertices is : 121
+Current number of deleted edges is 0
+The number of initial edges  : 33037894
+The number of delete edges   : 33028824
+The number of leftover edges : 9070
+Total time for k-Truss = 24 : 0.91093
+The number of iterations           : 7
+The number of iterations           : 7
+3774768, 33037894, 1e+10, 0.91093
+Vertices: 3774768    Edges: 33037894
+
+graph=graph500-scale18-ef16,k=24
+Original input: 174147 vertices, 3800348 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 174147 vertices, 7600696 edges
+Vertices: 174147    Edges: 7600696      7600696
+Current number of deleted edges is 4211610
+Number of active vertices is : 174147
+Current number of deleted edges is 358530
+Number of active vertices is : 30929
+Current number of deleted edges is 23256
+Number of active vertices is : 12780
+Current number of deleted edges is 10428
+Number of active vertices is : 12589
+Current number of deleted edges is 6188
+Number of active vertices is : 12458
+Current number of deleted edges is 4088
+Number of active vertices is : 12356
+Current number of deleted edges is 3074
+Number of active vertices is : 12294
+Current number of deleted edges is 2000
+Number of active vertices is : 12241
+Current number of deleted edges is 1434
+Number of active vertices is : 12206
+Current number of deleted edges is 990
+Number of active vertices is : 12179
+Current number of deleted edges is 606
+Number of active vertices is : 12161
+Current number of deleted edges is 316
+Number of active vertices is : 12149
+Current number of deleted edges is 244
+Number of active vertices is : 12143
+Current number of deleted edges is 76
+Number of active vertices is : 12137
+Current number of deleted edges is 112
+Number of active vertices is : 12136
+Current number of deleted edges is 0
+The number of initial edges  : 7600696
+The number of delete edges   : 4622952
+The number of leftover edges : 2977744
+Total time for k-Truss = 24 : 26.3183
+The number of iterations           : 18
+The number of iterations           : 18
+174147, 7600696, 1e+10, 26.3183
+Vertices: 174147    Edges: 7600696
+
+graph=graph500-scale19-ef16,k=24
+Original input: 335318 vertices, 7729675 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 335318 vertices, 15459350 edges
+Vertices: 335318    Edges: 15459350      15459350
+Current number of deleted edges is 8432742
+Number of active vertices is : 335318
+Current number of deleted edges is 811406
+Number of active vertices is : 50689
+Current number of deleted edges is 177494
+Number of active vertices is : 23303
+Current number of deleted edges is 37998
+Number of active vertices is : 18390
+Current number of deleted edges is 13058
+Number of active vertices is : 17528
+Current number of deleted edges is 5470
+Number of active vertices is : 17256
+Current number of deleted edges is 3152
+Number of active vertices is : 17148
+Current number of deleted edges is 1650
+Number of active vertices is : 17082
+Current number of deleted edges is 1020
+Number of active vertices is : 17048
+Current number of deleted edges is 476
+Number of active vertices is : 17025
+Current number of deleted edges is 248
+Number of active vertices is : 17015
+Current number of deleted edges is 178
+Number of active vertices is : 17010
+Current number of deleted edges is 34
+Number of active vertices is : 17005
+Current number of deleted edges is 0
+The number of initial edges  : 15459350
+The number of delete edges   : 9484926
+The number of leftover edges : 5974424
+Total time for k-Truss = 24 : 71.2871
+The number of iterations           : 16
+The number of iterations           : 16
+335318, 15459350, 1e+10, 71.2871
+Vertices: 335318    Edges: 15459350
+
+graph=graph500-scale20-ef16,k=24
+Original input: 645820 vertices, 15680861 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 645820 vertices, 31361722 edges
+Vertices: 645820    Edges: 31361722      31361722
+Current number of deleted edges is 17544154
+Number of active vertices is : 645820
+Current number of deleted edges is 1105500
+Number of active vertices is : 105980
+Current number of deleted edges is 538608
+Number of active vertices is : 53689
+Current number of deleted edges is 232056
+Number of active vertices is : 41055
+Current number of deleted edges is 107418
+Number of active vertices is : 35735
+Current number of deleted edges is 56746
+Number of active vertices is : 33444
+Current number of deleted edges is 34410
+Number of active vertices is : 32286
+Current number of deleted edges is 19296
+Number of active vertices is : 31566
+Current number of deleted edges is 11810
+Number of active vertices is : 31163
+Current number of deleted edges is 6494
+Number of active vertices is : 30913
+Current number of deleted edges is 3258
+Number of active vertices is : 30777
+Current number of deleted edges is 1776
+Number of active vertices is : 30703
+Current number of deleted edges is 678
+Number of active vertices is : 30660
+Current number of deleted edges is 116
+Number of active vertices is : 30642
+Current number of deleted edges is 58
+Number of active vertices is : 30639
+Current number of deleted edges is 64
+Number of active vertices is : 30638
+Current number of deleted edges is 26
+Number of active vertices is : 30637
+Current number of deleted edges is 0
+The number of initial edges  : 31361722
+The number of delete edges   : 19662468
+The number of leftover edges : 11699254
+Total time for k-Truss = 24 : 227.843
+The number of iterations           : 20
+The number of iterations           : 20
+645820, 31361722, 1e+10, 227.843
+Vertices: 645820    Edges: 31361722
+
+graph=graph500-scale21-ef16,k=24
+Original input: 1243072 vertices, 31731650 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 1243072 vertices, 63463300 edges
+Vertices: 1243072    Edges: 63463300      63463300
+Current number of deleted edges is 36174410
+Number of active vertices is : 1243072
+Current number of deleted edges is 2176332
+Number of active vertices is : 188590
+Current number of deleted edges is 433658
+Number of active vertices is : 81991
+Current number of deleted edges is 215510
+Number of active vertices is : 76528
+Current number of deleted edges is 114000
+Number of active vertices is : 72659
+Current number of deleted edges is 65930
+Number of active vertices is : 70513
+Current number of deleted edges is 40614
+Number of active vertices is : 69249
+Current number of deleted edges is 26430
+Number of active vertices is : 68463
+Current number of deleted edges is 16822
+Number of active vertices is : 67949
+Current number of deleted edges is 9580
+Number of active vertices is : 67588
+Current number of deleted edges is 4868
+Number of active vertices is : 67389
+Current number of deleted edges is 2798
+Number of active vertices is : 67279
+Current number of deleted edges is 1082
+Number of active vertices is : 67213
+Current number of deleted edges is 410
+Number of active vertices is : 67186
+Current number of deleted edges is 142
+Number of active vertices is : 67176
+Current number of deleted edges is 20
+Number of active vertices is : 67171
+Current number of deleted edges is 30
+Number of active vertices is : 67171
+Current number of deleted edges is 0
+The number of initial edges  : 63463300
+The number of delete edges   : 39282636
+The number of leftover edges : 24180664
+Total time for k-Truss = 24 : 689.862
+The number of iterations           : 20
+The number of iterations           : 20
+1243072, 63463300, 1e+10, 689.862
+Vertices: 1243072    Edges: 63463300
+
+graph=graph500-scale22-ef16,k=24
+Original input: 2393285 vertices, 64097004 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 2393285 vertices, 128194008 edges
+Vertices: 2393285    Edges: 128194008      128194008
+Current number of deleted edges is 73111650
+Number of active vertices is : 2393285
+Current number of deleted edges is 4694536
+Number of active vertices is : 309112
+Current number of deleted edges is 717872
+Number of active vertices is : 127744
+Current number of deleted edges is 180330
+Number of active vertices is : 112042
+Current number of deleted edges is 77640
+Number of active vertices is : 109807
+Current number of deleted edges is 41186
+Number of active vertices is : 108796
+Current number of deleted edges is 22908
+Number of active vertices is : 108159
+Current number of deleted edges is 14406
+Number of active vertices is : 107779
+Current number of deleted edges is 7784
+Number of active vertices is : 107509
+Current number of deleted edges is 4898
+Number of active vertices is : 107359
+Current number of deleted edges is 2912
+Number of active vertices is : 107266
+Current number of deleted edges is 1514
+Number of active vertices is : 107203
+Current number of deleted edges is 452
+Number of active vertices is : 107163
+Current number of deleted edges is 188
+Number of active vertices is : 107152
+Current number of deleted edges is 150
+Number of active vertices is : 107149
+Current number of deleted edges is 22
+Number of active vertices is : 107145
+Current number of deleted edges is 0
+The number of initial edges  : 128194008
+The number of delete edges   : 78878448
+The number of leftover edges : 49315560
+Total time for k-Truss = 24 : 1929.71
+The number of iterations           : 19
+The number of iterations           : 19
+2393285, 128194008, 1e+10, 1929.71
+Vertices: 2393285    Edges: 128194008
+
+graph=graph500-scale23-ef16,k=24
+Original input: 4606314 vertices, 129250705 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 4606314 vertices, 258501410 edges
+Vertices: 4606314    Edges: 258501410      258501410
+Current number of deleted edges is 152197266
+
+graph=amazon0302,k=48
+Original input: 262111 vertices, 899792 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 262111 vertices, 1799584 edges
+Vertices: 262111    Edges: 1799584      1799584
+Current number of deleted edges is 1799564
+Number of active vertices is : 262111
+Current number of deleted edges is 20
+Number of active vertices is : 17
+Current number of deleted edges is 0
+The number of initial edges  : 1799584
+The number of delete edges   : 1799584
+The number of leftover edges : 0
+Total time for k-Truss = 48 : 0.0710159
+The number of iterations           : 5
+The number of iterations           : 5
+262111, 1799584, 1e+10, 0.0710159
+Vertices: 262111    Edges: 1799584
+
+graph=cit-Patents,k=48
+Original input: 3774768 vertices, 16518947 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 3774768 vertices, 33037894 edges
+Vertices: 3774768    Edges: 33037894      33037894
+Current number of deleted edges is 33019148
+Number of active vertices is : 3774768
+Current number of deleted edges is 17040
+Number of active vertices is : 5317
+Current number of deleted edges is 1704
+Number of active vertices is : 65
+Current number of deleted edges is 2
+Number of active vertices is : 2
+Current number of deleted edges is 0
+The number of initial edges  : 33037894
+The number of delete edges   : 33037894
+The number of leftover edges : 0
+Total time for k-Truss = 48 : 0.919715
+The number of iterations           : 7
+The number of iterations           : 7
+3774768, 33037894, 1e+10, 0.919715
+Vertices: 3774768    Edges: 33037894
+
+graph=graph500-scale18-ef16,k=48
+Original input: 174147 vertices, 3800348 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 174147 vertices, 7600696 edges
+Vertices: 174147    Edges: 7600696      7600696
+Current number of deleted edges is 5269638
+Number of active vertices is : 174147
+Current number of deleted edges is 596358
+Number of active vertices is : 16470
+Current number of deleted edges is 95364
+Number of active vertices is : 5374
+Current number of deleted edges is 12984
+Number of active vertices is : 4126
+Current number of deleted edges is 3518
+Number of active vertices is : 4064
+Current number of deleted edges is 864
+Number of active vertices is : 4052
+Current number of deleted edges is 164
+Number of active vertices is : 4050
+Current number of deleted edges is 88
+Number of active vertices is : 4050
+Current number of deleted edges is 74
+Number of active vertices is : 4050
+Current number of deleted edges is 8
+Number of active vertices is : 4049
+Current number of deleted edges is 2
+Number of active vertices is : 4049
+Current number of deleted edges is 0
+The number of initial edges  : 7600696
+The number of delete edges   : 5979062
+The number of leftover edges : 1621634
+Total time for k-Truss = 48 : 29.7919
+The number of iterations           : 14
+The number of iterations           : 14
+174147, 7600696, 1e+10, 29.7919
+Vertices: 174147    Edges: 7600696
+
+graph=graph500-scale19-ef16,k=48
+Original input: 335318 vertices, 7729675 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 335318 vertices, 15459350 edges
+Vertices: 335318    Edges: 15459350      15459350
+Current number of deleted edges is 10443176
+Number of active vertices is : 335318
+Current number of deleted edges is 725046
+Number of active vertices is : 39804
+Current number of deleted edges is 471472
+Number of active vertices is : 15825
+Current number of deleted edges is 249264
+Number of active vertices is : 11516
+Current number of deleted edges is 105314
+Number of active vertices is : 8764
+Current number of deleted edges is 52376
+Number of active vertices is : 7701
+Current number of deleted edges is 29276
+Number of active vertices is : 7187
+Current number of deleted edges is 15766
+Number of active vertices is : 6908
+Current number of deleted edges is 10014
+Number of active vertices is : 6764
+Current number of deleted edges is 6904
+Number of active vertices is : 6677
+Current number of deleted edges is 4882
+Number of active vertices is : 6621
+Current number of deleted edges is 2692
+Number of active vertices is : 6572
+Current number of deleted edges is 1246
+Number of active vertices is : 6542
+Current number of deleted edges is 458
+Number of active vertices is : 6529
+Current number of deleted edges is 220
+Number of active vertices is : 6524
+Current number of deleted edges is 198
+Number of active vertices is : 6522
+Current number of deleted edges is 112
+Number of active vertices is : 6521
+Current number of deleted edges is 68
+Number of active vertices is : 6520
+Current number of deleted edges is 80
+Number of active vertices is : 6519
+Current number of deleted edges is 0
+The number of initial edges  : 15459350
+The number of delete edges   : 12118564
+The number of leftover edges : 3340786
+Total time for k-Truss = 48 : 73.348
+The number of iterations           : 22
+The number of iterations           : 22
+335318, 15459350, 1e+10, 73.348
+Vertices: 335318    Edges: 15459350
+
+graph=graph500-scale20-ef16,k=48
+Original input: 645820 vertices, 15680861 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 645820 vertices, 31361722 edges
+Vertices: 645820    Edges: 31361722      31361722
+Current number of deleted edges is 21815556
+Number of active vertices is : 645820
+Current number of deleted edges is 1323516
+Number of active vertices is : 60289
+Current number of deleted edges is 153720
+Number of active vertices is : 21691
+Current number of deleted edges is 95862
+Number of active vertices is : 21090
+Current number of deleted edges is 56566
+Number of active vertices is : 20316
+Current number of deleted edges is 36924
+Number of active vertices is : 19838
+Current number of deleted edges is 21488
+Number of active vertices is : 19504
+Current number of deleted edges is 13262
+Number of active vertices is : 19314
+Current number of deleted edges is 8906
+Number of active vertices is : 19191
+Current number of deleted edges is 6368
+Number of active vertices is : 19118
+Current number of deleted edges is 4170
+Number of active vertices is : 19063
+Current number of deleted edges is 2410
+Number of active vertices is : 19024
+Current number of deleted edges is 1720
+Number of active vertices is : 19004
+Current number of deleted edges is 936
+Number of active vertices is : 18987
+Current number of deleted edges is 626
+Number of active vertices is : 18978
+Current number of deleted edges is 170
+Number of active vertices is : 18972
+Current number of deleted edges is 44
+Number of active vertices is : 18969
+Current number of deleted edges is 74
+Number of active vertices is : 18969
+Current number of deleted edges is 0
+The number of initial edges  : 31361722
+The number of delete edges   : 23542318
+The number of leftover edges : 7819404
+Total time for k-Truss = 48 : 259.217
+The number of iterations           : 21
+The number of iterations           : 21
+645820, 31361722, 1e+10, 259.217
+Vertices: 645820    Edges: 31361722
+
+graph=graph500-scale21-ef16,k=48
+Original input: 1243072 vertices, 31731650 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 1243072 vertices, 63463300 edges
+Vertices: 1243072    Edges: 63463300      63463300
+Current number of deleted edges is 43216408
+Number of active vertices is : 1243072
+Current number of deleted edges is 3303764
+Number of active vertices is : 100248
+Current number of deleted edges is 434418
+Number of active vertices is : 32842
+Current number of deleted edges is 84530
+Number of active vertices is : 28014
+Current number of deleted edges is 33716
+Number of active vertices is : 27849
+Current number of deleted edges is 15612
+Number of active vertices is : 27797
+Current number of deleted edges is 7754
+Number of active vertices is : 27763
+Current number of deleted edges is 4442
+Number of active vertices is : 27746
+Current number of deleted edges is 2414
+Number of active vertices is : 27726
+Current number of deleted edges is 1206
+Number of active vertices is : 27714
+Current number of deleted edges is 904
+Number of active vertices is : 27711
+Current number of deleted edges is 694
+Number of active vertices is : 27706
+Current number of deleted edges is 274
+Number of active vertices is : 27701
+Current number of deleted edges is 52
+Number of active vertices is : 27698
+Current number of deleted edges is 14
+Number of active vertices is : 27698
+Current number of deleted edges is 12
+Number of active vertices is : 27698
+Current number of deleted edges is 0
+The number of initial edges  : 63463300
+The number of delete edges   : 47106214
+The number of leftover edges : 16357086
+Total time for k-Truss = 48 : 679.169
+The number of iterations           : 19
+The number of iterations           : 19
+1243072, 63463300, 1e+10, 679.169
+Vertices: 1243072    Edges: 63463300
+
+graph=graph500-scale22-ef16,k=48
+Original input: 2393285 vertices, 64097004 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 2393285 vertices, 128194008 edges
+Vertices: 2393285    Edges: 128194008      128194008
+Current number of deleted edges is 88533700
+Number of active vertices is : 2393285
+Current number of deleted edges is 5179024
+Number of active vertices is : 231388
+Current number of deleted edges is 2542360
+Number of active vertices is : 90335
+Current number of deleted edges is 640116
+Number of active vertices is : 51424
+Current number of deleted edges is 221062
+Number of active vertices is : 43149
+Current number of deleted edges is 102144
+Number of active vertices is : 40745
+Current number of deleted edges is 54492
+Number of active vertices is : 39694
+Current number of deleted edges is 32052
+Number of active vertices is : 39176
+Current number of deleted edges is 19194
+Number of active vertices is : 38879
+Current number of deleted edges is 10308
+Number of active vertices is : 38689
+Current number of deleted edges is 6838
+Number of active vertices is : 38594
+Current number of deleted edges is 4050
+Number of active vertices is : 38534
+Current number of deleted edges is 1634
+Number of active vertices is : 38486
+Current number of deleted edges is 692
+Number of active vertices is : 38471
+Current number of deleted edges is 330
+Number of active vertices is : 38464
+Current number of deleted edges is 156
+Number of active vertices is : 38461
+Current number of deleted edges is 78
+Number of active vertices is : 38460
+Current number of deleted edges is 132
+Number of active vertices is : 38460
+Current number of deleted edges is 34
+Number of active vertices is : 38459
+Current number of deleted edges is 18
+Number of active vertices is : 38459
+Current number of deleted edges is 12
+Number of active vertices is : 38459
+Current number of deleted edges is 6
+Number of active vertices is : 38459
+Current number of deleted edges is 4
+Number of active vertices is : 38459
+Current number of deleted edges is 2
+Number of active vertices is : 38459
+Current number of deleted edges is 0
+The number of initial edges  : 128194008
+The number of delete edges   : 97348438
+The number of leftover edges : 30845570
+Total time for k-Truss = 48 : 1974.35
+The number of iterations           : 27
+The number of iterations           : 27
+2393285, 128194008, 1e+10, 1974.35
+Vertices: 2393285    Edges: 128194008
+
+graph=graph500-scale23-ef16,k=48
+Original input: 4606314 vertices, 129250705 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 4606314 vertices, 258501410 edges
+Vertices: 4606314    Edges: 258501410      258501410
+Current number of deleted edges is 181077242
+
