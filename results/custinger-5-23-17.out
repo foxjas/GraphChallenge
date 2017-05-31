@@ -1,0 +1,351 @@
+graph=amazon0302,k=3
+Original input: 262111 vertices, 899792 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 262111 vertices, 1799584 edges
+Vertices: 262111    Edges: 1799584      1799584
+Total time for k-Truss = 3 : 0.0282814
+262111, 1799584, 1e+10, 0.0282814
+Vertices: 262111    Edges: 1799584
+
+graph=cit-Patents,k=3
+Original input: 3774768 vertices, 16518947 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 3774768 vertices, 33037894 edges
+Vertices: 3774768    Edges: 33037894      33037894
+Total time for k-Truss = 3 : 0.459067
+3774768, 33037894, 1e+10, 0.459067
+Vertices: 3774768    Edges: 33037894
+
+graph=graph500-scale18-ef16,k=3
+Original input: 174147 vertices, 3800348 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 174147 vertices, 7600696 edges
+Vertices: 174147    Edges: 7600696      7600696
+Total time for k-Truss = 3 : 6.94917
+174147, 7600696, 1e+10, 6.94917
+Vertices: 174147    Edges: 7600696
+
+graph=graph500-scale19-ef16,k=3
+Original input: 335318 vertices, 7729675 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 335318 vertices, 15459350 edges
+Vertices: 335318    Edges: 15459350      15459350
+Total time for k-Truss = 3 : 22.4768
+335318, 15459350, 1e+10, 22.4768
+Vertices: 335318    Edges: 15459350
+
+graph=graph500-scale20-ef16,k=3
+Original input: 645820 vertices, 15680861 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 645820 vertices, 31361722 edges
+Vertices: 645820    Edges: 31361722      31361722
+Total time for k-Truss = 3 : 67.2432
+645820, 31361722, 1e+10, 67.2432
+Vertices: 645820    Edges: 31361722
+
+graph=graph500-scale21-ef16,k=3
+Original input: 1243072 vertices, 31731650 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 1243072 vertices, 63463300 edges
+Vertices: 1243072    Edges: 63463300      63463300
+Total time for k-Truss = 3 : 191.637
+1243072, 63463300, 1e+10, 191.637
+Vertices: 1243072    Edges: 63463300
+
+graph=graph500-scale22-ef16,k=3
+Original input: 2393285 vertices, 64097004 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 2393285 vertices, 128194008 edges
+Vertices: 2393285    Edges: 128194008      128194008
+Total time for k-Truss = 3 : 549.044
+2393285, 128194008, 1e+10, 549.044
+Vertices: 2393285    Edges: 128194008
+
+graph=graph500-scale23-ef16,k=3
+Original input: 4606314 vertices, 129250705 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 4606314 vertices, 258501410 edges
+Vertices: 4606314    Edges: 258501410      258501410
+Total time for k-Truss = 3 : 1572.63
+4606314, 258501410, 1e+10, 1572.63
+Vertices: 4606314    Edges: 258501410
+
+graph=amazon0302,k=6
+Original input: 262111 vertices, 899792 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 262111 vertices, 1799584 edges
+Vertices: 262111    Edges: 1799584      1799584
+Total time for k-Truss = 6 : 0.0687657
+262111, 1799584, 1e+10, 0.0687657
+Vertices: 262111    Edges: 1799584
+
+graph=cit-Patents,k=6
+Original input: 3774768 vertices, 16518947 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 3774768 vertices, 33037894 edges
+Vertices: 3774768    Edges: 33037894      33037894
+Total time for k-Truss = 6 : 1.2266
+3774768, 33037894, 1e+10, 1.2266
+Vertices: 3774768    Edges: 33037894
+
+graph=graph500-scale18-ef16,k=6
+Original input: 174147 vertices, 3800348 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 174147 vertices, 7600696 edges
+Vertices: 174147    Edges: 7600696      7600696
+Total time for k-Truss = 6 : 26.6128
+174147, 7600696, 1e+10, 26.6128
+Vertices: 174147    Edges: 7600696
+
+graph=graph500-scale19-ef16,k=6
+Original input: 335318 vertices, 7729675 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 335318 vertices, 15459350 edges
+Vertices: 335318    Edges: 15459350      15459350
+Total time for k-Truss = 6 : 92.1277
+335318, 15459350, 1e+10, 92.1277
+Vertices: 335318    Edges: 15459350
+
+graph=graph500-scale20-ef16,k=6
+Original input: 645820 vertices, 15680861 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 645820 vertices, 31361722 edges
+Vertices: 645820    Edges: 31361722      31361722
+Total time for k-Truss = 6 : 307.871
+645820, 31361722, 1e+10, 307.871
+Vertices: 645820    Edges: 31361722
+
+graph=graph500-scale21-ef16,k=6
+Original input: 1243072 vertices, 31731650 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 1243072 vertices, 63463300 edges
+Vertices: 1243072    Edges: 63463300      63463300
+Total time for k-Truss = 6 : 1043.48
+1243072, 63463300, 1e+10, 1043.48
+Vertices: 1243072    Edges: 63463300
+
+graph=graph500-scale22-ef16,k=6
+Original input: 2393285 vertices, 64097004 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 2393285 vertices, 128194008 edges
+Vertices: 2393285    Edges: 128194008      128194008
+Total time for k-Truss = 6 : 2705.72
+2393285, 128194008, 1e+10, 2705.72
+Vertices: 2393285    Edges: 128194008
+
+graph=graph500-scale23-ef16,k=6
+Original input: 4606314 vertices, 129250705 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 4606314 vertices, 258501410 edges
+Vertices: 4606314    Edges: 258501410      258501410
+Total time for k-Truss = 6 : 8209.67
+4606314, 258501410, 1e+10, 8209.67
+Vertices: 4606314    Edges: 258501410
+
+graph=amazon0302,k=12
+Original input: 262111 vertices, 899792 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 262111 vertices, 1799584 edges
+Vertices: 262111    Edges: 1799584      1799584
+Total time for k-Truss = 12 : 0.0567953
+262111, 1799584, 1e+10, 0.0567953
+Vertices: 262111    Edges: 1799584
+
+graph=cit-Patents,k=12
+Original input: 3774768 vertices, 16518947 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 3774768 vertices, 33037894 edges
+Vertices: 3774768    Edges: 33037894      33037894
+Total time for k-Truss = 12 : 1.11908
+3774768, 33037894, 1e+10, 1.11908
+Vertices: 3774768    Edges: 33037894
+
+graph=graph500-scale18-ef16,k=12
+Original input: 174147 vertices, 3800348 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 174147 vertices, 7600696 edges
+Vertices: 174147    Edges: 7600696      7600696
+Total time for k-Truss = 12 : 33.1008
+174147, 7600696, 1e+10, 33.1008
+Vertices: 174147    Edges: 7600696
+
+graph=graph500-scale19-ef16,k=12
+Original input: 335318 vertices, 7729675 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 335318 vertices, 15459350 edges
+Vertices: 335318    Edges: 15459350      15459350
+Total time for k-Truss = 12 : 103.431
+335318, 15459350, 1e+10, 103.431
+Vertices: 335318    Edges: 15459350
+
+graph=graph500-scale20-ef16,k=12
+Original input: 645820 vertices, 15680861 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 645820 vertices, 31361722 edges
+Vertices: 645820    Edges: 31361722      31361722
+Total time for k-Truss = 12 : 304.826
+645820, 31361722, 1e+10, 304.826
+Vertices: 645820    Edges: 31361722
+
+graph=graph500-scale21-ef16,k=12
+Original input: 1243072 vertices, 31731650 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 1243072 vertices, 63463300 edges
+Vertices: 1243072    Edges: 63463300      63463300
+Total time for k-Truss = 12 : 833.183
+1243072, 63463300, 1e+10, 833.183
+Vertices: 1243072    Edges: 63463300
+
+graph=graph500-scale22-ef16,k=12
+Original input: 2393285 vertices, 64097004 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 2393285 vertices, 128194008 edges
+Vertices: 2393285    Edges: 128194008      128194008
+Total time for k-Truss = 12 : 2575.4
+2393285, 128194008, 1e+10, 2575.4
+Vertices: 2393285    Edges: 128194008
+
+graph=graph500-scale23-ef16,k=12
+Original input: 4606314 vertices, 129250705 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 4606314 vertices, 258501410 edges
+Vertices: 4606314    Edges: 258501410      258501410
+
+graph=amazon0302,k=24
+Original input: 262111 vertices, 899792 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 262111 vertices, 1799584 edges
+Vertices: 262111    Edges: 1799584      1799584
+Total time for k-Truss = 24 : 0.0607198
+262111, 1799584, 1e+10, 0.0607198
+Vertices: 262111    Edges: 1799584
+
+graph=cit-Patents,k=24
+Original input: 3774768 vertices, 16518947 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 3774768 vertices, 33037894 edges
+Vertices: 3774768    Edges: 33037894      33037894
+Total time for k-Truss = 24 : 0.796495
+3774768, 33037894, 1e+10, 0.796495
+Vertices: 3774768    Edges: 33037894
+
+graph=graph500-scale18-ef16,k=24
+Original input: 174147 vertices, 3800348 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 174147 vertices, 7600696 edges
+Vertices: 174147    Edges: 7600696      7600696
+Total time for k-Truss = 24 : 32.0065
+174147, 7600696, 1e+10, 32.0065
+Vertices: 174147    Edges: 7600696
+
+graph=graph500-scale19-ef16,k=24
+Original input: 335318 vertices, 7729675 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 335318 vertices, 15459350 edges
+Vertices: 335318    Edges: 15459350      15459350
+Total time for k-Truss = 24 : 89.5878
+335318, 15459350, 1e+10, 89.5878
+Vertices: 335318    Edges: 15459350
+
+graph=graph500-scale20-ef16,k=24
+Original input: 645820 vertices, 15680861 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 645820 vertices, 31361722 edges
+Vertices: 645820    Edges: 31361722      31361722
+Total time for k-Truss = 24 : 286.792
+645820, 31361722, 1e+10, 286.792
+Vertices: 645820    Edges: 31361722
+
+graph=graph500-scale21-ef16,k=24
+Original input: 1243072 vertices, 31731650 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 1243072 vertices, 63463300 edges
+Vertices: 1243072    Edges: 63463300      63463300
+Total time for k-Truss = 24 : 880.416
+1243072, 63463300, 1e+10, 880.416
+Vertices: 1243072    Edges: 63463300
+
+graph=graph500-scale22-ef16,k=24
+Original input: 2393285 vertices, 64097004 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 2393285 vertices, 128194008 edges
+Vertices: 2393285    Edges: 128194008      128194008
+Total time for k-Truss = 24 : 2429.8
+2393285, 128194008, 1e+10, 2429.8
+Vertices: 2393285    Edges: 128194008
+
+graph=graph500-scale23-ef16,k=24
+Original input: 4606314 vertices, 129250705 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 4606314 vertices, 258501410 edges
+Vertices: 4606314    Edges: 258501410      258501410
+
+graph=amazon0302,k=48
+Original input: 262111 vertices, 899792 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 262111 vertices, 1799584 edges
+Vertices: 262111    Edges: 1799584      1799584
+Total time for k-Truss = 48 : 0.0609584
+262111, 1799584, 1e+10, 0.0609584
+Vertices: 262111    Edges: 1799584
+
+graph=cit-Patents,k=48
+Original input: 3774768 vertices, 16518947 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 3774768 vertices, 33037894 edges
+Vertices: 3774768    Edges: 33037894      33037894
+Total time for k-Truss = 48 : 0.789825
+3774768, 33037894, 1e+10, 0.789825
+Vertices: 3774768    Edges: 33037894
+
+graph=graph500-scale18-ef16,k=48
+Original input: 174147 vertices, 3800348 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 174147 vertices, 7600696 edges
+Vertices: 174147    Edges: 7600696      7600696
+Total time for k-Truss = 48 : 32.3069
+174147, 7600696, 1e+10, 32.3069
+Vertices: 174147    Edges: 7600696
+
+graph=graph500-scale19-ef16,k=48
+Original input: 335318 vertices, 7729675 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 335318 vertices, 15459350 edges
+Vertices: 335318    Edges: 15459350      15459350
+Total time for k-Truss = 48 : 84.1709
+335318, 15459350, 1e+10, 84.1709
+Vertices: 335318    Edges: 15459350
+
+graph=graph500-scale20-ef16,k=48
+Original input: 645820 vertices, 15680861 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 645820 vertices, 31361722 edges
+Vertices: 645820    Edges: 31361722      31361722
+Total time for k-Truss = 48 : 298.472
+645820, 31361722, 1e+10, 298.472
+Vertices: 645820    Edges: 31361722
+
+graph=graph500-scale21-ef16,k=48
+Original input: 1243072 vertices, 31731650 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 1243072 vertices, 63463300 edges
+Vertices: 1243072    Edges: 63463300      63463300
+Total time for k-Truss = 48 : 781.118
+1243072, 63463300, 1e+10, 781.118
+Vertices: 1243072    Edges: 63463300
+
+graph=graph500-scale22-ef16,k=48
+Original input: 2393285 vertices, 64097004 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 2393285 vertices, 128194008 edges
+Vertices: 2393285    Edges: 128194008      128194008
+Total time for k-Truss = 48 : 2330.91
+2393285, 128194008, 1e+10, 2330.91
+Vertices: 2393285    Edges: 128194008
+
+graph=graph500-scale23-ef16,k=48
+Original input: 4606314 vertices, 129250705 edges
+Removed 0 duplicate edges in conversion to undirected
+Processed 4606314 vertices, 258501410 edges
+Vertices: 4606314    Edges: 258501410      258501410
+
