@@ -1,0 +1,20 @@
+graph=amazon0302,k=3
+elapsed time: 24.892143854 seconds
+ 29.702295 seconds (40.03 M allocations: 4.969 GB, 2.46% gc time)
+graph=cit-Patents,k=3
+elapsed time: 24738.012507448 seconds
+24770.686722 seconds (631.87 M allocations: 131.489 GB, 0.01% gc time)
+graph=graph500-scale18-ef16,k=3
+elapsed time: 4226.731929665 seconds
+4234.866841 seconds (183.22 M allocations: 1.442 TB, 0.29% gc time)
+graph=amazon0302,k=6
+elapsed time: 1002.061800751 seconds
+1006.345894 seconds (147.22 M allocations: 27.360 GB, 0.30% gc time)
+graph=cit-Patents,k=6
+graph=graph500-scale18-ef16,k=6
+elapsed time: 15718.677505325 seconds
+15732.444281 seconds (237.55 M allocations: 2.139 TB, 0.69% gc time)
+graph=amazon0302,k=12
+elapsed time: 491.24547537 seconds
+498.419150 seconds (52.97 M allocations: 8.521 GB, 0.49% gc time)
+graph=cit-Patents,k=12
