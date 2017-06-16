@@ -9,6 +9,7 @@ import time
 #import pandas as pd
 
 import scipy.io as sio
+from pprint import pprint
 
 ###################################################
 ###################################################
@@ -18,7 +19,7 @@ def StrArrayRead(filename):
     edgelist = []
     with open(filename, 'r') as f:
         for line in f:
-            edgelist.append(list(map(float, line.split('\t'))))
+            edgelist.append(list(map(float, line.strip().split())))
     f.close()
     return np.asarray(edgelist)
 
@@ -49,9 +50,7 @@ def StrArrayWrite(nparray, filename):
 
 #Use Pandas if you have it
 #pd.DataFrame(nparray).to_csv(filename, sep='\t', header=False, index=False)
-
-
-def ktruss (inc_mat_file,k):
+def ktruss(inc_mat_file,k):
     
     ii=StrArrayRead(inc_mat_file)
     
@@ -59,35 +58,74 @@ def ktruss (inc_mat_file,k):
     
     E=csr_matrix(( ii[:,2], (ii[:,0]-1, ii[:,1]-1)), shape=(max(ii[:,0]),max(ii[:,1])))
     
-    readTime=time.clock()
-    
     tmp=np.transpose(E)*E
     sizeX,sizeY=np.shape(tmp)
-    
-    # print("Time to Read Data:  " + str(readTime-startTime) + "s")
-    # print("Computing k-truss")
     tmp.setdiag(np.zeros(sizeX),k=0)
-    #set_diag_val(tmp,0)
     tmp.eliminate_zeros()
     R= E * tmp
-    
     s=lil_matrix(((R==2).astype(float)).sum(axis=1))
     xc= (s >=k-2).astype(int)
-    
+
     while xc.sum() != np.unique(sp.sparse.find(E)[0]).shape:
         x=sp.sparse.find(xc==0)[0]
-        #x=np.where(xc==0)[0]
         set_zero_rows(E, x)
         E.eliminate_zeros()
         tmp=np.transpose(E)*E
         (tmp).setdiag(np.zeros(np.shape(tmp)[0]),k=0)
         tmp.eliminate_zeros()
+        R = E*tmp
         s=csr_matrix(((R==2).astype(float)).sum(axis=1))
         xc= (s >=k-2).astype(int)
 
     ktrussTime=time.clock()
     print("k={}: {}".format(k, ktrussTime-startTime))
     return E
+
+
+
+def ktruss_max(inc_mat_file):
+    
+    ii=StrArrayRead(inc_mat_file)
+    
+    startTime=time.clock()
+    
+    E=csr_matrix(( ii[:,2], (ii[:,0]-1, ii[:,1]-1)), shape=(max(ii[:,0]),max(ii[:,1])))
+    k=3
+
+    t_iter = time.clock()
+
+    tmp=np.transpose(E)*E
+    sizeX,sizeY=np.shape(tmp)
+    tmp.setdiag(np.zeros(sizeX),k=0)
+    #set_diag_val(tmp,0)
+    tmp.eliminate_zeros()
+    R= E * tmp
+    s=lil_matrix(((R==2).astype(float)).sum(axis=1))
+
+    while True:
+        xc= (s >=k-2).astype(int)
+        while xc.sum() != np.unique(sp.sparse.find(E)[0]).shape:
+            # print("sp.sparse.find(E): \n{}\n".format(sp.sparse.find(E)))
+            # print("np.unique(sp.sparse.find(E)[0]).shape: \n{}\n".format(np.unique(sp.sparse.find(E)[0]).shape))
+            x=sp.sparse.find(xc==0)[0]
+            #x=np.where(xc==0)[0]
+            set_zero_rows(E, x)
+            E.eliminate_zeros()
+            tmp=np.transpose(E)*E
+            (tmp).setdiag(np.zeros(np.shape(tmp)[0]),k=0)
+            tmp.eliminate_zeros()
+            R = E*tmp
+            s=csr_matrix(((R==2).astype(float)).sum(axis=1))
+            xc= (s >=k-2).astype(int)
+
+        print('k-iter={}: {}'.format(k, time.clock()-t_iter));
+        if not E.nnz:
+            break
+        k += 1
+        t_iter = time.clock()
+
+    ktrussTime=time.clock()
+    print("k={}: {}".format(k-1, ktrussTime-startTime))
 
 
 ###################################################
