@@ -3,7 +3,7 @@
 %       inc_mat_file - path to file containing incidence matrix
 %       k 
 %
-function [E,t_ktruss] = ktruss(inc_mat_file, k)
+function [t_ktruss] = ktruss(inc_mat_file, k)
 
 ii = load(inc_mat_file);
 t0 = clock;
@@ -29,7 +29,7 @@ while nnz(xc) ~= nnz(any(E,2))
 end
 
 t_ktruss = etime(clock, t0);
-printf('k=%d: %f\n', k, t_ktruss);
+fprintf('k=%d: %f\n', k, t_ktruss);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Graph Challenge benchmark
