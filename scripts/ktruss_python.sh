@@ -1,20 +1,26 @@
 #!/bin/bash
 
 OUT=$1
+k=$2
 INPUT_DIR=/data/GraphChallenge-17
 APP=$HOME/GraphChallenge/SubgraphIsomorphism/ktruss/code/python/runKtrussBenchmark.py
 PYTHON=$HOME/anaconda/bin/python3
-# snap_graphs=(amazon0302 cit-Patents)
-# scale_graphs=(graph500-scale18-ef16 graph500-scale19-ef16 graph500-scale20-ef16)
-graphs=(amazon0302 cit-Patents graph500-scale18-ef16)
-K=(3 6 12 24 48)
-# K=(6 12 24 48)
-for k in "${K[@]}"
-do
+
+graphs=(p2p-Gnutella08 ca-HepTh amazon0601 wiki-Talk as-skitter cit-Patents soc-LiveJournal1 indochina-2004)
+
+if [ ! -z "$k" ]
+then
 	for graph in "${graphs[@]}"
 	do
 		input="${INPUT_DIR}/${graph}_inc.tsv"
 		echo "graph=${graph},k=$k" >> ${OUT}
 		${PYTHON} ${APP} ${input} $k >> ${OUT}
 	done
-done
+else
+	for graph in "${graphs[@]}"
+	do
+		input="${INPUT_DIR}/${graph}_inc.tsv"
+		echo "graph=${graph}" >> ${OUT}
+		${PYTHON} ${APP} ${input} >> ${OUT}
+	done
+fi
