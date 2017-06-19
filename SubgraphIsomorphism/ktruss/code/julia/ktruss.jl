@@ -30,9 +30,50 @@ function ktruss(inc_mtx_file, k)
         E[find(x), :] = 0
         x, xc = calcx(E, m, n, k);
     end
-    toc();
-    
+    tEnd = toq();
+    @printf "k=%d: %f\n" k tEnd
+
     return E
+end
+
+function ktruss_max(inc_mtx_file)
+    if ~isfile( inc_mtx_file )
+        println("unable to open input file");
+        return (-1);
+    end
+
+    # load input data       
+    t_read_inc=@elapsed ii = readdlm( inc_mtx_file, '\t', Int64);
+    # println("incidence matrix read time : ", t_read_inc);
+
+    t_create_inc=@elapsed E = sparse( ii[:,1], ii[:,2], ii[:,3] );
+    # println("sparse adj. matrix creation time : ", t_create_inc);
+
+    k = 3;
+    
+    tic();
+    while true
+        tic();
+
+        m,n = size(E);
+        x, xc = calcx(E, m, n, k);
+        while sum(xc) != sum( any(E,2) )
+            E[find(x), :] = 0
+            x, xc = calcx(E, m, n, k);
+        end
+
+        tEnd = toq();
+        @printf "k-iter=%d: %f\n" k tEnd
+        if !(nnz(E) > 0)
+            break
+        end
+        k = k + 1;
+
+    end
+    tEnd = toq();
+    @printf "k=%d: %f\n" k-1 tEnd
+
+    return k-1
 end
 
 
