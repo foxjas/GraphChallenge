@@ -8,6 +8,8 @@ function [t_ktruss] = ktruss(inc_mat_file, k)
 ii = load(inc_mat_file);
 t0 = clock;
 E = sparse( ii(:,1), ii(:,2), ii(:,3) );
+fprintf('|E|=%d\n', nnz(E));
+
 t_read = etime(clock, t0);
 % fprintf(2, 'time to read data  : %f sec.\n', t_read);
 
@@ -27,6 +29,8 @@ while nnz(xc) ~= nnz(any(E,2))
     s = sum(double(R==2),2);
     xc = s >= k-2;
 end
+
+fprintf('|E|=%d\n', nnz(E));
 
 t_ktruss = etime(clock, t0);
 fprintf('k=%d: %f\n', k, t_ktruss);

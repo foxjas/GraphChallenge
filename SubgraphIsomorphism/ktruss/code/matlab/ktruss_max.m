@@ -7,6 +7,8 @@ function [t_ktruss] = ktruss_max(inc_mat_file)
 ii = load(inc_mat_file);
 t0 = clock;
 E = sparse( ii(:,1), ii(:,2), ii(:,3) );
+fprintf('|E|=%d\n', nnz(E));
+
 t_read = etime(clock, t0);
 
 t0 = clock;
@@ -18,6 +20,8 @@ s = sum(double(R==2),2);
 
 while 1
     xc = s >= k-2;
+%     fprintf('|xc|=%d\n', nnz(xc));
+
     % While edges exist violating k-Truss, delete those edges and take a subgraph.
     while nnz(xc) ~= nnz(any(E,2))
         E(not(xc),:) = 0; % zero out edge-row    
@@ -28,7 +32,7 @@ while 1
     end
     t_iter = etime(clock, t1);
     fprintf('k-iter=%d: %f\n', k, t_iter);
-%     fprintf('k-iter=%d, |E|=%d\n', k, nnz(E));
+    fprintf('|E|=%d\n', nnz(E));
     if ~nnz(xc)
         break
     end
