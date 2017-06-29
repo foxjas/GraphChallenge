@@ -19,7 +19,7 @@ def SNAPtoIncTSV(inputPath, outPath):
         for line in fe:
             l = line.strip()
             if not l.startswith("#"):
-                src_id, dst_id = [int(vId) for vId in l.split()]
+                src_id, dst_id = [int(vId) for vId in l.split()[:2]]
                 edge_list.append( (min(src_id, dst_id), max(src_id, dst_id)) )
                 vSet.add(src_id)
                 vSet.add(dst_id)
@@ -49,8 +49,8 @@ def SNAPtoIncTSV(inputPath, outPath):
         for i, edge in enumerate(unique_edges):
         	src, dst = edge
         	src_r, dst_r = relabel_map[src]+1, relabel_map[dst]+1
-        	f_mm.write("{} {} 1\n".format(i+1, src_r))
-        	f_mm.write("{} {} 1\n".format(i+1, dst_r))
+        	f_mm.write("{}\t{}\t1\n".format(i+1, src_r))
+        	f_mm.write("{}\t{}\t1\n".format(i+1, dst_r))
 
     print("Vertices: {}, Edges: {}".format(nv, ne))
 
@@ -104,8 +104,10 @@ def main(argv):
     inputPath = argv[0]
     outDir = argv[1] # produce both _inc.tsv and _adj.mmio files
     baseName = os.path.basename(inputPath).split('.')[0]
+    if "_" in baseName:
+        baseName = baseName.split('_')[0]
     outPath = os.path.join(outDir, baseName+"_adj.mmio")
-    SNAPtoAdjMMIO(inputPath, outPath)
+    # SNAPtoAdjMMIO(inputPath, outPath)
     outPath2 = os.path.join(outDir, baseName+"_inc.tsv")
     SNAPtoIncTSV(inputPath, outPath2)
     
