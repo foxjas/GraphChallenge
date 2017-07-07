@@ -4,10 +4,9 @@ OUT=$1
 MODE=$2
 
 INPUT_DIR=$DATA
-APP=$HOME/ktruss2/build/ktruss
+APP=$HOME/cuStingerAlg2/build/KTruss
 
 graphs=(graphulo-scale10 graphulo-scale11 graphulo-scale12 graphulo-scale13 graphulo-scale14 graphulo-scale15 graphulo-scale16)
-
 
 if [ "$MODE" == 4 ]
 then

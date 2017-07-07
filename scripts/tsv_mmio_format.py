@@ -107,9 +107,9 @@ def main(argv):
     if "_" in baseName:
         baseName = baseName.split('_')[0]
     outPath = os.path.join(outDir, baseName+"_adj.mmio")
-    # SNAPtoAdjMMIO(inputPath, outPath)
+    SNAPtoAdjMMIO(inputPath, outPath)
     outPath2 = os.path.join(outDir, baseName+"_inc.tsv")
-    SNAPtoIncTSV(inputPath, outPath2)
+    # SNAPtoIncTSV(inputPath, outPath2)
     
 if __name__ == "__main__":
     main(sys.argv[1:])
