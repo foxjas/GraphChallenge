@@ -195,13 +195,14 @@ void writeMarket(char* outPath, unordered_set<vertexId_t> &vertices, vector<edge
         printf("Removed %d duplicate edges in conversion to undirected\n", duplicates);
     }
     vector<edge_t> ().swap(edges); // deallocates edges
+    ne = edges_final.size();
 
     // write to output
     ofstream fout;
     fout.open(outPath);
-    printf("Outputting new matrix market graph: %d vertices, %d edges\n", vertices.size(), edges_final.size());
+    printf("Outputting new matrix market graph: %d vertices, %d edges\n", nv, ne);
     fout << "\%\%MatrixMarket matrix coordinate pattern " << direction_header << "\n";
-    fout << vertices.size() << " " <<  vertices.size() << " " << ne << "\n";
+    fout << nv << " " <<  nv << " " << ne << "\n";
     for (edgeId_t i=0; i<ne; i++) {
         src = edges_final[i].first;
         dst = edges_final[i].second;
@@ -289,8 +290,8 @@ void writeSNAP(char* outPath, unordered_set<vertexId_t> &vertices, vector<edge_t
     // write to output
     ofstream fout;
     fout.open(outPath);
-    printf("Outputting new SNAP graph: %d vertices, %d edges\n", vertices.size(), edges_final.size());
-    fout << vertices.size() << " " <<  vertices.size() << " " << ne << "\n";
+    printf("Outputting new SNAP graph: %d vertices, %d edges\n", nv, ne);
+    fout << nv << " " <<  nv << " " << ne << "\n";
     for (edgeId_t i=0; i<ne; i++) {
         src = edges_final[i].first;
         dst = edges_final[i].second;
