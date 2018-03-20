@@ -12,12 +12,14 @@ using namespace std;
 
 typedef int32_t vertexId_t;
 typedef int64_t edgeId_t;
+typedef int32_t degree_t;
 typedef pair<vertexId_t, vertexId_t> edge_t;
 
 const unsigned int DIRECTED = 1;
 const unsigned int BIDIRECTIONAL = 2;
 const unsigned int UNDIRECTED = 4;
 
+// utility
 bool sortByPairAsec(const edge_t &a, const edge_t &b) {
     if (a.first < b.first) {
       return true;
@@ -37,6 +39,16 @@ bool sortByPairDesc(const edge_t &a, const edge_t &b) {
       return (a.second > b.second);
     }
 }
+
+bool hasOption(const char* option, int argc, char **argv) {
+  for (int i = 1; i < argc; i++) {
+      if (strcmp(argv[i], option) == 0)
+          return true;
+  }
+  return false;
+}
+
+//===============================================================
 
 /**
  * 
@@ -103,9 +115,10 @@ void readSNAP(char* outPath, unordered_set<vertexId_t> &vertices, vector<edge_t>
 
 }
     
-void writeMarket(char* outPath, unordered_set<vertexId_t> &vertices, vector<edge_t> &edges, unsigned int direction = DIRECTED) {
+void writeMarket(char* outPath, unordered_set<vertexId_t> &vertices, vector<edge_t> &edges, unsigned int direction = DIRECTED, bool sortAdjacencies = false, bool directedByDegree = false) {
     string direction_header;
     vector<edge_t> edges_final;
+    vector<degree_t> degrees;
     unsigned int ne = edges.size();
     unsigned int nv = vertices.size();
     vertexId_t src, dst;
@@ -115,14 +128,19 @@ void writeMarket(char* outPath, unordered_set<vertexId_t> &vertices, vector<edge
         direction_header = "symmetric";
     }
 
-    if (direction == DIRECTED) {
+    // enforce as only acceptable combination for directed by degree
+    if (direction == DIRECTED and directedByDegree)
+        degrees.resize(nv);
+
+    if (direction == DIRECTED and not directedByDegree) {
         edges_final = edges;
     } else {
         for (edgeId_t i=0; i<ne; i++) {
             src = edges[i].first;
             dst = edges[i].second;
-            if (direction == DIRECTED) {
-                edges.push_back(edge_t(src, dst));
+            if (direction == DIRECTED and directedByDegree) {
+                edges_final.push_back(edge_t(src, dst));
+                degrees[src] += 1;
             } else if (direction == BIDIRECTIONAL) {
                 edges_final.push_back(edge_t(src, dst));
                 edges_final.push_back(edge_t(dst, src));
@@ -132,10 +150,32 @@ void writeMarket(char* outPath, unordered_set<vertexId_t> &vertices, vector<edge
         }
     }
 
+    // input MUST be bidirectional
+    if (directedByDegree) {
+        vector<edge_t> edges_temp;
+        degree_t deg_src, deg_dst;
+        for (vector<edge_t>::iterator pair = edges_final.begin(); pair != edges_final.end(); pair++) {
+            src = pair->first;
+            dst = pair->second;
+            deg_src = degrees[src];
+            deg_dst = degrees[dst];
+            if ((deg_src < deg_dst) || ((deg_src == deg_dst) && (src < dst))) {
+                edges_temp.push_back(*pair);
+            }
+        }
+        edges_final = edges_temp;
+        printf("Directed by degree: %d edges\n", edges_final.size());
+    }
+
+    if (sortAdjacencies || direction == UNDIRECTED) {
+        cout << "Sorting adjacencies..." << endl;
+        sort(edges_final.begin(), edges_final.end(), sortByPairAsec);
+    }
+
     if (direction == UNDIRECTED) {
         direction_header = "symmetric";
         vector<edge_t> edges_temp;
-        sort(edges_final.begin(), edges_final.end(), sortByPairAsec);
+        //sort(edges_final.begin(), edges_final.end(), sortByPairAsec);
         vertexId_t prev_src = -1;
         vertexId_t prev_dst = -1;
         vertexId_t src, dst;
@@ -179,13 +219,15 @@ void writeSNAP(char* outPath, unordered_set<vertexId_t> &vertices, vector<edge_t
 int main(const int argc, char *argv[])
 {
     if (argc < 4) {
-        fprintf(stderr, "Usage: [input_path] [output_path] [1|2|4] [1|2|4]\n");
+        fprintf(stderr, "Usage: <input_path> <output_path> <1|2|4> <1|2|4> [--sort] [--directed-degree]\n");
         exit(-1);
     }
     char *input_graph_path = argv[1];
     char *output_graph_path = argv[2];
     unsigned int direction_in = atoi(argv[3]);
     unsigned int direction_out = atoi(argv[4]);
+    bool writeDirectedByDegree = hasOption("--sort", argc, argv);
+    bool writeSortedAdjacencies = hasOption("--directed-degree", argc, argv);
 
     string inFileName(input_graph_path);
     string outFileName(output_graph_path);
@@ -201,12 +243,14 @@ int main(const int argc, char *argv[])
     if (isMarketInput) {
         readMarket(input_graph_path, vertices, edges, direction_in);
     } else {
+        // TODO
         readSNAP(input_graph_path, vertices, edges, direction_in);
     }
 
     if (isMarketInput) {
-        writeMarket(output_graph_path, vertices, edges, direction_out);
+        writeMarket(output_graph_path, vertices, edges, direction_out, writeSortedAdjacencies, writeDirectedByDegree);
     } else {
+        // TODO
         writeSNAP(input_graph_path, vertices, edges, direction_in);
     }
     diff = clock() - start;
