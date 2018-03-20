@@ -100,7 +100,7 @@ void readMarket(char* inputGraphPath, unordered_set<vertexId_t> &vertices, vecto
             if (src == prev_src && dst == prev_dst) {
                 duplicates += 1;
             }  else {
-                edges_temp.push_back(*pair);
+                edges_temp.push_back(edge_t(src, dst));
                 prev_src = src;
                 prev_dst = dst;
             }
@@ -164,7 +164,7 @@ void writeMarket(char* outPath, unordered_set<vertexId_t> &vertices, vector<edge
             }
         }
         edges_final = edges_temp;
-        printf("Directed by degree: %d edges\n", edges_final.size());
+        printf("Directed by degree graph: %d edges\n", edges_final.size());
     }
 
     if (sortAdjacencies || direction == UNDIRECTED) {
@@ -211,10 +211,94 @@ void writeMarket(char* outPath, unordered_set<vertexId_t> &vertices, vector<edge
 
 }
 
-void writeSNAP(char* outPath, unordered_set<vertexId_t> &vertices, vector<edge_t> &edges, unsigned int direction = DIRECTED) {
+void writeSNAP(char* outPath, unordered_set<vertexId_t> &vertices, vector<edge_t> &edges, unsigned int direction = DIRECTED, bool sortAdjacencies = false, bool directedByDegree = false) {
+    vector<edge_t> edges_final;
+    vector<degree_t> degrees;
+    unsigned int ne = edges.size();
+    unsigned int nv = vertices.size();
+    vertexId_t src, dst;
+
+    // enforce as only acceptable combination for directed by degree
+    if (direction == DIRECTED and directedByDegree)
+        degrees.resize(nv);
+
+    if (direction == DIRECTED and not directedByDegree) {
+        edges_final = edges;
+    } else {
+        for (edgeId_t i=0; i<ne; i++) {
+            src = edges[i].first;
+            dst = edges[i].second;
+            if (direction == DIRECTED and directedByDegree) {
+                edges_final.push_back(edge_t(src, dst));
+                degrees[src] += 1;
+            } else if (direction == BIDIRECTIONAL) {
+                edges_final.push_back(edge_t(src, dst));
+                edges_final.push_back(edge_t(dst, src));
+            } else if (direction == UNDIRECTED) {
+                edges_final.push_back(edge_t(min(src, dst), max(src, dst)));
+            }
+        }
+    }
+
+    // input MUST be bidirectional
+    if (directedByDegree) {
+        vector<edge_t> edges_temp;
+        degree_t deg_src, deg_dst;
+        for (vector<edge_t>::iterator pair = edges_final.begin(); pair != edges_final.end(); pair++) {
+            src = pair->first;
+            dst = pair->second;
+            deg_src = degrees[src];
+            deg_dst = degrees[dst];
+            if ((deg_src < deg_dst) || ((deg_src == deg_dst) && (src < dst))) {
+                edges_temp.push_back(*pair);
+            }
+        }
+        edges_final = edges_temp;
+        printf("Directed by degree graph: %d edges\n", edges_final.size());
+    }
+
+    if (sortAdjacencies || direction == UNDIRECTED) {
+        cout << "Sorting adjacencies..." << endl;
+        sort(edges_final.begin(), edges_final.end(), sortByPairAsec);
+    }
+
+    if (direction == UNDIRECTED) {
+        vector<edge_t> edges_temp;
+        //sort(edges_final.begin(), edges_final.end(), sortByPairAsec);
+        vertexId_t prev_src = -1;
+        vertexId_t prev_dst = -1;
+        vertexId_t src, dst;
+        int duplicates = 0;
+        for (vector<edge_t>::iterator pair = edges_final.begin(); pair != edges_final.end(); pair++) {
+            src = pair->first;
+            dst = pair->second;
+            if (src == prev_src && dst == prev_dst) {
+                duplicates += 1;
+            } else {
+                edges_temp.push_back(*pair);
+                prev_src = src;
+                prev_dst = dst;
+            }
+        }
+        edges_final = edges_temp;
+        printf("Removed %d duplicate edges in conversion to undirected\n", duplicates);
+    }
+    vector<edge_t> ().swap(edges); // deallocates edges
+    ne = edges_final.size();
+    
+    // write to output
+    ofstream fout;
+    fout.open(outPath);
+    printf("Outputting new SNAP graph: %d vertices, %d edges\n", vertices.size(), edges_final.size());
+    fout << vertices.size() << " " <<  vertices.size() << " " << ne << "\n";
+    for (edgeId_t i=0; i<ne; i++) {
+        src = edges_final[i].first;
+        dst = edges_final[i].second;
+        fout << src << " " << dst << "\n";
+    }
+    fout.close();
 
 }
-
 
 int main(const int argc, char *argv[])
 {
@@ -247,11 +331,11 @@ int main(const int argc, char *argv[])
         readSNAP(input_graph_path, vertices, edges, direction_in);
     }
 
-    if (isMarketInput) {
+    if (isMarketOutput) {
         writeMarket(output_graph_path, vertices, edges, direction_out, writeSortedAdjacencies, writeDirectedByDegree);
     } else {
         // TODO
-        writeSNAP(input_graph_path, vertices, edges, direction_in);
+        writeSNAP(output_graph_path, vertices, edges, direction_out, writeSortedAdjacencies, writeDirectedByDegree);
     }
     diff = clock() - start;
     int msec = diff * 1000 / CLOCKS_PER_SEC;
